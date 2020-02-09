@@ -1,0 +1,33 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Add person</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<link type="text/css" rel="stylesheet" th:href="@{css/bootstrap.min.css}" />
+</head>
+<body>
+<div class="container">
+	<h1>New person</h1>
+	<div class="col-md-4">
+		<form th:object="${person}" th:action="@{save}" action="#" method="post">
+			<input type="text" th:field="*{firstName}" class="form-control"
+				placeholder="Firstname" />
+			<div style="clear: both; display: block; height: 10px;"></div>
+			<input type="text" th:field="*{lastName}" class="form-control"
+				placeholder="Lastname" />
+			<div style="clear: both; display: block; height: 10px;"></div>
+			<input type="text" th:field="*{age}" class="form-control"
+				placeholder="age" />
+			<div style="clear: both; display: block; height: 10px;"></div>	
+			<input type="text" th:field="*{favouritecolor}" class="form-control"
+				placeholder="favouritColor" />
+			<div style="clear: both; display: block; height: 10px;"></div>	
+			<input type="text" th:field="hobby" class="form-control"
+				placeholder="Hobby" />	
+			<div style="clear: both; display: block; height: 10px;"></div>
+			<input type="submit" class="btn btn-primary" value="Save"></input>
+		</form>
+	</div>
+</div>
+</body>
+</html>
